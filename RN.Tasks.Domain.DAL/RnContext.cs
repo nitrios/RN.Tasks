@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
+using RN.Tasks.Core;
+using RN.Tasks.Domain.DAL.InitData;
 using RN.Tasks.Domain.Entities;
 
 namespace RN.Tasks.Domain.DAL
 {
     public class RnContext : DbContext
     {
-        private const string MigrationAssembly = "RN.Tasks.DAL";
+        public const string MigrationAssembly = "RN.Tasks.DAL";
         
         public RnContext(DbContextOptions options) : base(options)
         {
@@ -19,10 +21,10 @@ namespace RN.Tasks.Domain.DAL
         {
             if (optionsBuilder.IsConfigured) return;
 
-            var connectionString = "";
+            var connectionString = AppSettings.Get().ConnectionString;
 
             optionsBuilder.UseSqlServer(connectionString,
-                    b => b.MigrationsAssembly(MigrationAssembly));
+                    b => b.MigrationsAssembly("RN.Tasks.Domain.DAL"));
             }
         
         public virtual DbSet<UserTask> Tasks { get; set; }

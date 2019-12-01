@@ -1,7 +1,7 @@
 using System;
 using RN.Tasks.Domain.Entities;
 
-namespace RN.Tasks.Domain.DAL
+namespace RN.Tasks.Domain.DAL.InitData
 {
     public static class UserTaskInitData
     {
