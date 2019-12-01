@@ -5,5 +5,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RN.Tasks.MainWindow"
         Title="RN.Tasks">
-    Welcome to Avalonia!
+        
+        <Grid>
+                <TreeView x:Name="TaskTreeView"  HorizontalAlignment="Left" Height="227" Margin="10,32,0,0" VerticalAlignment="Top" Width="178" />
+        </Grid>
+        
 </Window>

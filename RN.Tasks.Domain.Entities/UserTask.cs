@@ -1,9 +1,10 @@
 using System;
-using System.Data;
+using System.ComponentModel.DataAnnotations.Schema;
+using RN.Tasks.Domain.Entities.Base;
 
 namespace RN.Tasks.Domain.Entities
 {
-    public class UserTask
+    public class UserTask : DataEntity
     {
         public string Name { get; set; }
 
@@ -18,5 +19,11 @@ namespace RN.Tasks.Domain.Entities
         public long PlannedComplexity { get; set; }
         
         public long LeadTime { get; set; }
+        
+        public int? TaskId { get; set; }
+        
+        [NotMapped]
+        [ForeignKey("TaskId")]
+        public virtual UserTask ParentTask { get; set; }
     }
 }

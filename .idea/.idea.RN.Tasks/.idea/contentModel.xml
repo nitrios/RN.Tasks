@@ -8,10 +8,14 @@
         <e p=".gitignore" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
+        <e p="Core" t="Include">
+          <e p="AppSettings.cs" t="Include" />
+        </e>
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="RN.Tasks.csproj" t="IncludeRecursive" />
+        <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="nuget.config" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -25,6 +29,8 @@
       </e>
       <e p="RN.Tasks.Domain.DAL" t="IncludeRecursive">
         <e p="RN.Tasks.Domain.DAL.csproj" t="IncludeRecursive" />
+        <e p="RnContext.cs" t="Include" />
+        <e p="UserTaskInitData.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -35,6 +41,10 @@
         </e>
       </e>
       <e p="RN.Tasks.Domain.Entities" t="IncludeRecursive">
+        <e p="Base" t="Include">
+          <e p="DataEntity.cs" t="Include" />
+          <e p="IDataEntity.cs" t="Include" />
+        </e>
         <e p="RN.Tasks.Domain.Entities.csproj" t="IncludeRecursive" />
         <e p="TaskStatuses.cs" t="Include" />
         <e p="UserTask.cs" t="Include" />
